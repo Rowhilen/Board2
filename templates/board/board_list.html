@@ -1,0 +1,33 @@
+<html>
+<head>
+   
+</head>
+
+<body>
+{% if board_list %}
+    <ul>
+    {% for board in board_list %}
+        <table class = "table">
+            <thead>
+                <tr>
+                  <th scope="col">제목</th>
+                </tr>
+              </thead>
+
+            <tbody>
+                <tr>
+                    <th scope="col"><li><a href="/board/{{ board.id }}/">{{ board.subject }}</a></li></th>
+                </tr>
+            </tbody>
+        </table>
+            
+                            
+        
+    {% endfor %}
+    </ul>
+{% else %}
+<p>게시글이 없습니다.</p>
+{% endif %}
+</body>
+
+</html>
